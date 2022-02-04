@@ -41,3 +41,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* 검색창을 클릭할 때 감싸고 있는 아웃라인이 생기기지 않게 설정 */
+input:focus {
+	outline: none;
+}
+
+a {
+	/* color zilla */
+	color: #2e363e;  
+	text-decoration: none;
+}
