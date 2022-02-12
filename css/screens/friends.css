@@ -28,3 +28,31 @@
     justify-content: space-between;
     color: rgba(0, 0, 0, 0.5);
 }
+
+@keyframes hideSplashScreen {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        /* 숨겨진 splashscreen이 friend html를 덮고 있어
+        네비게이션 바를 클릭할 수 없었는데
+        visibility 속성으로 클릭할 수 있게됨 */
+        visibility: hidden;
+    }
+}
+#splash-screen {
+    background-color: var(--yellow);
+    width: 100vw;
+    height: 100vh;
+    top: 0; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-size: 132px;
+    /* 애니메이션의 끝에 forwards 속성으로 애니메이션의 마지막 상태가 계속 지속됨 */
+    animation: hideSplashScreen 1s ease-in-out forwards;
+    /* 애니메이션이 2초 지나고 나서 발생. */
+    animation-delay: 2s;
+}
