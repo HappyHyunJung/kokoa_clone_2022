@@ -1,0 +1,22 @@
+#no-mobile {
+    position: absolute;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    top: 0;
+}
+
+/* 너비가 일정 크기 이상이 되면 no-mobile 화면이
+display:flex 되어 메시지 창이 뜬다
+너비가 일정 크기 이하이면 display:none이 되어 
+메시지 창이 사라짐  */
+@media screen and (max-width: 645px){
+    #no-mobile {
+        display: none;
+    }
+}
