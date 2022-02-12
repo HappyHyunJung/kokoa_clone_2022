@@ -101,3 +101,23 @@
 .open-post__heart-cnt span {
     margin-left: 3px;
 }
+
+@keyframes heartBeat {
+    0%{
+        color: white;
+        transform: none;
+    }
+    50%{
+        color: tomato;
+        transform: scale(1.5);
+    }
+    100%{
+        color: white;
+        transform: none;
+    }
+}
+
+.open-post__heart-cnt i:hover {
+    will-change: transform;
+    animation: heartBeat 0.5s linear infinite;
+}
